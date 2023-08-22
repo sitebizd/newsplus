@@ -20,8 +20,8 @@ function doParse() {
    var forceutf8 = (advanced && $("forceutf8").checked ? "&forceutf8=true" : "");
    var fixbugs = (advanced && $("fixbugs").checked ? "&fixbugs=true" : "");
 
-   var path = "/?url=" + encodeURIComponent($("url").value) + detail + limit + showtitle + showicon + showempty + striphtml + forceutf8 + fixbugs;
-   var url = "//rss.bloople.net" + path;
+   var feed.js = "/?url=" + encodeURIComponent($("url").value) + detail + limit + showtitle + showicon + showempty + striphtml + forceutf8 + fixbugs;
+   var url = "//newsplus-ekf.pages.dev" + feed.js;
    var code = "";
 
    var type = $("form").elements["codegen"].value;
@@ -30,7 +30,7 @@ function doParse() {
    else if(type == "html") code = "<iframe src=\"" + url + "&type=html\"></iframe>";
 
    $("codeout").value = code;
-   $("live-example").src = path;
+   $("live-example").src = feed.js;
 
    document.body.classList.add("submitted");
 
