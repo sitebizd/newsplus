@@ -21,7 +21,7 @@ function doParse() {
    var fixbugs = (advanced && $("fixbugs").checked ? "&fixbugs=true" : "");
 
    var path = "/?url=" + encodeURIComponent($("url").value) + detail + limit + showtitle + showicon + showempty + striphtml + forceutf8 + fixbugs;
-   var url = "//newsplus-ekf.pages.dev/rss.php" + path;
+   var url = "//rss.bloople.net" + path;
    var code = "";
 
    var type = $("form").elements["codegen"].value;
